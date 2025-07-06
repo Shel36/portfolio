@@ -11,13 +11,11 @@ function AppWrapper() {
   return (
     <>
       {showRain && <NameRain />}
-      <div style={{ padding: '1rem' }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutmee" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutmee" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }
