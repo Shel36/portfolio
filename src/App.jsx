@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -18,10 +18,11 @@ function RoutesWithRain() {
     <>
       {showRain && <NameRain />}
       <Routes>
+        <Route index element={<Home />} /> {/* Explicit index route for "/" */}
         <Route path="/" element={<Home />} />
         <Route path="/aboutmee" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Navigate to="/" />} /> {/* Redirect */}
+        <Route path="*" element={<Navigate to="/" />} /> {/* Fallback */}
       </Routes>
     </>
   );
@@ -29,9 +30,9 @@ function RoutesWithRain() {
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio">
+    <Router basename="/portfolio">
       <RoutesWithRain />
-    </BrowserRouter>
+    </Router>
   );
 }
 
