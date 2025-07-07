@@ -4,7 +4,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NameRain from './pages/NameRain';
 
-function AppWrapper() {
+function RoutesWithRain() {
   const location = useLocation();
   const showRain = location.pathname === '/';
 
@@ -23,7 +23,7 @@ function AppWrapper() {
 function App() {
   return (
     <Router basename="/portfolio">
-      <AppWrapper />
+      <RoutesWithRain />
     </Router>
   );
 }
