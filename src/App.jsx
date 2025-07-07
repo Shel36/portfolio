@@ -15,6 +15,7 @@ function RoutesWithRain() {
         <Route path="/" element={<Home />} />
         <Route path="/aboutmee" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </>
   );
