@@ -22,7 +22,7 @@ function AppWrapper() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <AppWrapper />
     </Router>
   );
